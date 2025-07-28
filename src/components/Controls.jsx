@@ -1,5 +1,5 @@
 import React from 'react';
-import './Controls.css';
+// import './Controls.css';
 
 function Controls({ onStartStop, onReset }) {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import './TimerDisplay.css';
+// import './TimerDisplay.css';
 
 const TimerDisplay = ({ timerLabel, timeLeft }) => {
     return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import './SessionControl.css';
+// import './SessionControl.css';
 
 function SessionControl({ sessionLength, onIncrement, onDecrement }) {
   return (

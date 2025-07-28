@@ -1,5 +1,5 @@
 import React from "react";
-import './BreakControl.css';
+// import './BreakControl.css';
 
 const BreakControl = ({ breakLength, onIncrement, onDecrement }) => {
     return (
