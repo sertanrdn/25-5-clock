@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { TimerContext } from "../context/TimerContext.jsx";
-// import './TimerDisplay.css';
+import '../styles/TimerDisplay.css';
 
 const TimerDisplay = () => {
     const { mode, timeLeft } = useContext(TimerContext);

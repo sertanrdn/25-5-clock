@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { TimerContext } from '../context/TimerContext.jsx';
-// import './Controls.css';
+import '../styles/Controls.css';
 
 const Controls = () => {
   const { handleStartStop, handleReset } = useContext(TimerContext);
