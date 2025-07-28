@@ -1,0 +1,31 @@
+.break-control {
+    width: 250px;
+}
+  
+#break-label {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+  
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+  
+.break-control button {
+    background: none;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+  
+#break-length {
+    width: 40px;
+    display: inline-block;
+    text-align: center;
+}
+  

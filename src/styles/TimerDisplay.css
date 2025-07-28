@@ -1,0 +1,25 @@
+.timer {
+    border: 7px solid #13353a;
+    border-radius: 50px;
+    width: 270px;
+    height: 160px;
+    margin: 20px auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.timer-wrapper {
+    text-align: center;
+}
+  
+#timer-label {
+    font-size: 1.2rem;
+}
+  
+#time-left {
+    font-family: 'digital', monospace;
+    font-size: 80px;
+}
+  
