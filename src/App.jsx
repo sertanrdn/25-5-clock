@@ -9,6 +9,7 @@ function App() {
 
   return (
     <div className="App">
+      <h1 className="main-title">25 + 5 Clock</h1>
       <div className="controls-container">
         <BreakControl />
         <SessionControl />

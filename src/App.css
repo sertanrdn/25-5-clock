@@ -22,18 +22,10 @@ body {
   margin-bottom: 20px;
 }
 
-.author {
-  text-align: center;
-  font-family: 'Share Tech Mono', monospace;
-  margin-top: 15px;
-  font-size: 14px;
-  color: #a50d0d;
-}
-
-.author a {
-  text-decoration: none;
-  color: #00264d;
-  line-height: 26px;
+.main-title {
+  font-family: 'Share Tech Mono', sans-serif;
+  font-size: 50px;
+  margin-bottom: 20px;
 }
 
 @media screen and (max-width: 500px) {

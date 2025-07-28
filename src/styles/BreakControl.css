@@ -14,7 +14,7 @@
     gap: 1rem;
 }
   
-button {
+.break-control button {
     background: none;
     outline: none;
     border: none;

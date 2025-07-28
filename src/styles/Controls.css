@@ -5,7 +5,7 @@
     margin-top: 10px;
 }
   
-button {
+.controls button {
     background: none;
     outline: none;
     border: none;
@@ -17,6 +17,6 @@ button {
     border-radius: 5px;
 }
   
-button:active {
+.controls button:active {
     color: #13353a;
 }
