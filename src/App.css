@@ -4,3 +4,31 @@
   padding: 2rem;
   text-align: center;
 }
+
+.App {
+  max-width: 500px;  /* Keep app container narrow like the example */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top-controls {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.timer-display-container {
+  margin-bottom: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.controls-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

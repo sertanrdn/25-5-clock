@@ -9,10 +9,16 @@ function App() {
 
   return (
     <div className='App'>
-      <BreakControl />
-      <SessionControl />
-      <TimerDisplay />
-      <Controls />
+      <div className="top-controls">
+        <BreakControl />
+        <SessionControl />
+      </div>
+      <div className="timer-display-container">
+        <TimerDisplay />
+      </div>
+      <div className="controls-container">
+        <Controls />
+      </div>
     </div>
   );
 }
