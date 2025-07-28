@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { TimerContext } from '../context/TimerContext';
+import { TimerContext } from '../context/TimerContext.jsx';
 // import './SessionControl.css';
 
 const SessionControl = () => {

@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { TimerContext } from "../context/TimerContext";
+import { TimerContext } from "../context/TimerContext.jsx";
 // import './TimerDisplay.css';
 
 const TimerDisplay = () => {
@@ -8,7 +8,11 @@ const TimerDisplay = () => {
         <div>
             <h2 id="timer-label">{mode}</h2>
             <div id="time-left">{timeLeft}</div>
-            <audio id="beep" src="/beep.mp3" />
+            <audio
+                id="beep"
+                preload="auto"
+                src="https://cdn.freecodecamp.org/testable-projects-fcc/audio/BeepSound.wav"
+            />
         </div>
     );
 }
