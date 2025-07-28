@@ -1,34 +1,43 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+body {
+  background: #1e555c;
+  color: white;
+  font-size: 30px;
   text-align: center;
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
 .App {
-  max-width: 500px;  /* Keep app container narrow like the example */
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.top-controls {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  margin-bottom: 2rem;
-}
-
-.timer-display-container {
-  margin-bottom: 2rem;
-  width: 100%;
-  display: flex;
   justify-content: center;
+  height: 100vh;
 }
 
 .controls-container {
-  width: 100%;
   display: flex;
   justify-content: center;
+  gap: 2rem;
+  margin-bottom: 20px;
+}
+
+.author {
+  text-align: center;
+  font-family: 'Share Tech Mono', monospace;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #a50d0d;
+}
+
+.author a {
+  text-decoration: none;
+  color: #00264d;
+  line-height: 26px;
+}
+
+@media screen and (max-width: 500px) {
+  .App {
+    transform: scale(0.8);
+  }
 }

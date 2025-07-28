@@ -5,7 +5,7 @@ import '../styles/Controls.css';
 const Controls = () => {
   const { handleStartStop, handleReset } = useContext(TimerContext);
   return (
-    <div>
+    <div className='controls'>
       <button id="start_stop" onClick={handleStartStop}>Start/Stop</button>
       <button id="reset" onClick={handleReset}>Reset</button>
     </div>

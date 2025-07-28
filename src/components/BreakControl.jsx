@@ -6,7 +6,7 @@ const BreakControl = () => {
     const { breakLength, incrementBreak, decrementBreak } = useContext(TimerContext);
 
     return (
-        <div className="break-control-container">
+        <div className="break-control">
             <h2 id="break-label">Break Length</h2>
             <div className="controls">
                 <button id="break-decrement" onClick={decrementBreak}>-</button>

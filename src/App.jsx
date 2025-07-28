@@ -8,17 +8,13 @@ import './App.css';
 function App() {
 
   return (
-    <div className='App'>
-      <div className="top-controls">
+    <div className="App">
+      <div className="controls-container">
         <BreakControl />
         <SessionControl />
       </div>
-      <div className="timer-display-container">
-        <TimerDisplay />
-      </div>
-      <div className="controls-container">
-        <Controls />
-      </div>
+      <TimerDisplay />
+      <Controls />
     </div>
   );
 }

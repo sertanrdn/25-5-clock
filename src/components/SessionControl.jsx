@@ -6,7 +6,7 @@ const SessionControl = () => {
   const { sessionLength, incrementSession, decrementSession } = useContext(TimerContext);
 
   return (
-    <div className='session-control-container'>
+    <div className='session-control'>
       <h2 id="session-label">Session Length</h2>
       <div className='controls'>
         <button id="session-decrement" onClick={decrementSession}>-</button>

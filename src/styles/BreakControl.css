@@ -1,46 +1,31 @@
-/* Container styling */
-.break-control-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 1rem;
+.break-control {
+    width: 250px;
 }
   
-/* Label */
 #break-label {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-bottom: 0.5rem;
 }
   
-/* Buttons */
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+  
 button {
-    background-color: #3498db;
+    background: none;
+    outline: none;
     border: none;
     color: white;
     font-size: 1.5rem;
-    width: 40px;
-    height: 40px;
-    margin: 0 5px;
-    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
   
-button:hover {
-    background-color: #2980b9;
-}
-  
-/* Break length display */
 #break-length {
-    font-size: 1.5rem;
-    margin: 0 10px;
     width: 40px;
-    text-align: center;
     display: inline-block;
+    text-align: center;
 }
-
-.controls {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+  
