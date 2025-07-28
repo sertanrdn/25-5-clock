@@ -13,6 +13,11 @@ function App() {
       <SessionControl />
       <TimerDisplay />
       <Controls />
+      <audio
+        id="beep"
+        preload="auto"
+        src="https://cdn.freecodecamp.org/testable-projects-fcc/audio/BeepSound.wav"
+      />
     </div>
   );
 }

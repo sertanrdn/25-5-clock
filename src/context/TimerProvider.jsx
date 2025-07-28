@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { TimerContext } from "./TimerContext";
 
 export const TimerProvider = ({ children }) => {
@@ -9,50 +9,56 @@ export const TimerProvider = ({ children }) => {
     const [isRunning, setIsRunning] = useState(false);
     const intervalRef = useRef(null);
 
+    // Transition between Session and Break
+    useEffect(() => {
+        if (!isRunning) return;
+
+        intervalRef.current = setInterval(() => {
+            setTimeLeft(prev => {
+                if (prev === 0) {
+                    const beep = document.getElementById("beep");
+                    if (beep) beep.play();
+    
+                    if (mode === 'Session') {
+                        setMode('Break');
+                        return breakLength * 60;
+                    } else {
+                        setMode('Session');
+                        return sessionLength * 60;
+                    }
+                }
+                return prev - 1;
+            });
+        }, 1000);
+    
+        return () => clearInterval(intervalRef.current);
+    }, [isRunning, breakLength, sessionLength, mode]);
+
+    // Format time as MM:SS
     const formatTime = (time) => {
         const minutes = String(Math.floor(time / 60)).padStart(2, '0');
         const seconds = String(time % 60).padStart(2, '0');
         return `${minutes}:${seconds}`;
     }
 
+    // Handle resetting
     const handleReset = () => {
         clearInterval(intervalRef.current);
+        setIsRunning(false);
         setBreakLength(5);
         setSessionLength(25);
         setTimeLeft(25 * 60);
-        setIsRunning(false);
         setMode('Session');
         const beep = document.getElementById('beep');
-        if(beep) {
+        if (beep) {
             beep.pause();
             beep.currentTime = 0;
         }
     }
 
+    // Start/Stop handler
     const handleStartStop = () => {
-        if (isRunning) {
-            clearInterval(intervalRef.current);
-            setIsRunning(false);
-        } else {
-            intervalRef.current = setInterval(() => {
-                setTimeLeft(prev => {
-                    if (prev === 0) {
-                        const beep = document.getElementById('beep');
-                        if (beep) beep.play();
-
-                        if (mode === 'Session') {
-                            setMode('Break');
-                            return breakLength * 60;
-                        } else {
-                            setMode('Session');
-                            return sessionLength * 60;
-                        }
-                    }
-                    return prev - 1;
-                });
-            }, 1000);
-            setIsRunning(true);
-        }
+        setIsRunning(prev => !prev);
     }
 
     // Increment/Decrement
