@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
+import { TimerContext } from '../context/TimerContext.jsx'; 
 // import './BreakControl.css';
 
-const BreakControl = ({ breakLength, onIncrement, onDecrement }) => {
+const BreakControl = () => {
+    const { breakLength, incrementBreak, decrementBreak } = useContext(TimerContext);
+
     return (
         <div>
             <h2 id="break-label">Break Length</h2>
-            <button id="break-decrement" onClick={onDecrement}>-</button>
+            <button id="break-decrement" onClick={decrementBreak}>-</button>
             <span id="break-length">{breakLength}</span>
-            <button id="break-increment" onClick={onIncrement}>+</button>
+            <button id="break-increment" onClick={incrementBreak}>+</button>
         </div>
     );
 }

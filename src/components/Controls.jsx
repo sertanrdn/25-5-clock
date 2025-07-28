@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { TimerContext } from '../context/TimerContext';
 // import './Controls.css';
 
-function Controls({ onStartStop, onReset }) {
+const Controls = () => {
+  const { handleStartStop, handleReset } = useContext(TimerContext);
   return (
     <div>
-      <button id="start_stop" onClick={onStartStop}>Start/Stop</button>
-      <button id="reset" onClick={onReset}>Reset</button>
+      <button id="start_stop" onClick={handleStartStop}>Start/Stop</button>
+      <button id="reset" onClick={handleReset}>Reset</button>
     </div>
   );
 }
